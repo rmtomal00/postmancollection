@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "0fe33023-11b4-40df-ac9d-8a5525250414",
+		"name": "email_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13557566"
+	},
+	"item": [
+		{
+			"name": "send email api",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "yKUDXSPNqTgBdmKAvyYkm2eGzC6PoSxnLYEycDZmNyYz1gX0sMoMtzdDFaIJRDvM7CLPkI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "// You do not need to create again and again\n//suppose now i am sending email from team@tm71.top but i need to send from support@tm71.top. There you do not neet to create another email just change the team@tm71.top to support@tm71.top and brandName Tm 12 to support. \n// if need more support please contact us. https://wa.me/+8801738619197\n\n{\n    \"to\": \"rmtomal11@gmail.com\",\n    \"from\":\"team@tm71.top\",\n    \"content\":\"Dear user, this a test mail for email server check. Do you get the email? what is your response.\",\n    \"subject\":\"E-Mail Server test\",\n    \"isHtml\": true,\n    \"brandName\": \"Tm 12\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{email_api}}/api/v1/public/send-email",
+					"host": [
+						"{{email_api}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"send-email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get status",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "yKUDXSPNqTgBdmKAvyYkm2eGzC6PoSxnLYEycDZmNyYz1gX0sMoMtzdDFaIJRDvM7CLPkI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{email_api}}/api/v1/public/get-status/vpr6vB",
+					"host": [
+						"{{email_api}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"get-status",
+						"vpr6vB"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "email_api",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
